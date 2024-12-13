@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+body {
+  height: 100vh;
+  background-color: rgb(10, 25, 47);
+  color: #ffff;
+  font-family: "outfit";
+  animation: fadeIn 3s ease-in-out;
+  animation-fill-mode: forwards; 
+}
+
+@media (max-width:768px) {
+  * {
+    margin: 0%;
+    padding: 0%;
+  }
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&family=Outfit:wght@100..900&family=Playwrite+PT+Guides&family=Yuji+Mai&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(10, 25, 47);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  z-index: 1000;
+}
+.nav-menu li a {
+  color: white; 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-menu li a.active {
+  color: #b923e1; 
+  font-weight: bold;
+  border-bottom: 2px solid #b923e1; 
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo {
+  font-family: "Yuji Mai", serif;
+  font-weight: 600;
+  font-size: 7vh;
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  margin: 15px 0 0 0;
+  display: flex;
+  gap: 30px;
+  font-size: 20px;
+}
+.nav-menu li {
+  transition: transform 0.2s;
+}
+.nav-menu li:hover {
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  animation: vibrate-updown 0.5s linear;
+}
+
+@keyframes vibrate-updown {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px); 
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.nav-connect {
+  font-size: 16px;
+  padding: 15px 20px;
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1 102.06%);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+.nav-mob-close {
+  display: none;
+}
+.nav-mob-open {
+  display: none;
+}
+
+
+@media(max-width:768px) {
+  .logo {
+    font-size: 7vh;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 4px;
+  }
+  .nav-mob-close {
+    margin: 0;
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 220px;
+    width: 50px;
+  }
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+    background-color: rgb(10, 25, 47);
+  }
+  .nav-menu li {
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
