@@ -59,10 +59,14 @@
     width: 50%;
   }
   .hero h1 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
-  .hero-connect, .hero-resume {
-    padding: 12px 17px;
-    font-size: 13px;
+  .hero-connect {
+    padding: 15px 25px;
+    font-size: 15px;
+  }
+  .hero-resume {
+    padding: 15px 25px;
+    font-size: 15px;
   }
 }
