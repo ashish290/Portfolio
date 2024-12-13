@@ -80,5 +80,9 @@
         display: flex;
         justify-content: center;
     }
+    .skill-section p {
+        font-size: 3vh;
+        margin: 10px;
+    }
 
 }
